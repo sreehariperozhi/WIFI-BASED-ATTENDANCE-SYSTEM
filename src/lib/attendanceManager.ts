@@ -219,10 +219,6 @@ class AttendanceManager {
       return { success: false, message: "Already marked" };
     }
 
-    if (existingRecord) {
-      return { success: false, message: "Already marked" };
-    }
-
     try {
       const { data: record, error } = await supabase
         .from('attendance_records')
